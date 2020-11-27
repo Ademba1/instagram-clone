@@ -2,7 +2,7 @@ import React from "react";
 import "./Post.css";
 import Avatar from "@material-ui/core/Avatar";
 
-export default function Post(props) {
+export default function Post({ username, caption, imageUrl }) {
   return (
     <div className="post">
       {/*Header -> avatar + Username*/}
@@ -10,19 +10,15 @@ export default function Post(props) {
         <Avatar
           className="post__avatar"
           src="/static/images/avatar/1.jpg"
-          alt="Rafeh"
+          alt="Oscar"
         />
-        <h3>Username</h3>
+        <h3>{username}</h3>
       </div>
       {/*Image*/}
-      <img
-        className="post__Image"
-        src="https://i.ytimg.com/vi/wc4jFStaR2c/maxresdefault.jpg"
-        alt=""
-      />
+      <img className="post__Image" src={imageUrl} alt="" />
       {/*Username + Caption*/}
       <h4 className="post__text">
-        <strong>Oscar</strong> am doing this!!
+        <strong>Oscar</strong> {caption}
       </h4>
     </div>
   );

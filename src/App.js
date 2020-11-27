@@ -1,7 +1,22 @@
 import "./App.css";
 import Post from "./Post";
+import { useState } from "react";
 
 function App() {
+  const [posts, setPosts] = useState([
+    {
+      username: "Oscar",
+      caption: "woow it works",
+      imageUrl: "https://i.ytimg.com/vi/wc4jFStaR2c/maxresdefault.jpg",
+    },
+
+    {
+      username: "Oscar",
+      caption: "woow it works",
+      imageUrl: "https://i.ytimg.com/vi/wc4jFStaR2c/maxresdefault.jpg",
+    },
+  ]);
+
   return (
     <div className="App">
       {/*Header*/}
@@ -16,10 +31,13 @@ function App() {
 
       {/*Posts*/}
       {/*Posts*/}
-      <Post />
-      <Post />
-      <Post />
-      <Post />
+      {posts.map((post) => (
+        <Post
+          username={post.username}
+          caption={post.caption}
+          imageUrl={post.imageUrl}
+        />
+      ))}
     </div>
   );
 }
