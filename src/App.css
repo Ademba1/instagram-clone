@@ -12,3 +12,8 @@
   border-bottom: 1px solid lightgray;
   object-fit: contain; /*Keep image aspect ratio*/
 }
+
+.app__signUp {
+  display: flex;
+  flex-direction: column;
+}
