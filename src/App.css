@@ -5,6 +5,10 @@
 .App {
   background-color: #fafafa;
 }
+.app__posts {
+  padding: 20px;
+  display: flex;
+}
 
 .app__header {
   background-color: white;
