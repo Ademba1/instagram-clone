@@ -209,6 +209,8 @@ function App() {
             <Post
               //add key to only render changed posts
               key={id}
+              postId={id}
+              user={user}
               username={post.username}
               caption={post.caption}
               imageUrl={post.imageUrl}
@@ -217,7 +219,7 @@ function App() {
         </div>
         <div className="app__postsRight">
           <InstagramEmbed
-            url="https://instagr.am/p/Zw9o4/"
+            url="https://www.instagram.com/p/BZnjB_8D9cv/"
             clientAccessToken="123|456"
             maxWidth={320}
             hideCaption={false}
